@@ -12,11 +12,7 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_detailFragment"
-            app:destination="@id/detailFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+            app:destination="@id/detailFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -27,5 +23,11 @@
             android:name="bundleInfo"
             app:argType="string"
             android:defaultValue="empty" />
+
     </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.keyvani.navigationcomponent.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" />
 </navigation>

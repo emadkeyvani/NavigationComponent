@@ -6,6 +6,7 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.keyvani.navigationcomponent.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -20,8 +21,9 @@ class MainActivity : AppCompatActivity() {
 
         binding.apply {
             navController=findNavController(R.id.navHost)
-            appBarConfiguration = AppBarConfiguration(setOf(R.id.homeFragment,R.id.detailFragment))
+            appBarConfiguration = AppBarConfiguration(setOf(R.id.homeFragment,R.id.detailFragment,R.id.addFragment))
             setupActionBarWithNavController(navController,appBarConfiguration)
+            bottomNav.setupWithNavController(navController)
 
         }
     }

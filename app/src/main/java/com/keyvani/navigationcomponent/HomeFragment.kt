@@ -26,9 +26,11 @@ class HomeFragment : Fragment() {
              val direction = HomeFragmentDirections.actionHomeFragmentToDetailFragment(edtText.text.toString())
              findNavController().navigate(direction)
              edtText.setText("")
+
          }
 
         }
+
     }
 
 
